@@ -1,0 +1,10 @@
+<div class="logo"></div>
+<%= gmaps(:map_options => { :raw => '{ 	panControlOptions: {
+                    							position: google.maps.ControlPosition.LEFT_CENTER
+         								},
+										zoomControlOptions: {
+                    							position: google.maps.ControlPosition.LEFT_CENTER
+         								}}' 
+                          },
+          :markers => { :data => @json  } 
+)%> 
