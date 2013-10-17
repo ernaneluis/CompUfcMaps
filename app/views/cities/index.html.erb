@@ -4,6 +4,9 @@
   <tr>
     <th>Name</th>
     <th>State</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Gmaps</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,6 +16,9 @@
   <tr>
     <td><%= city.name %></td>
     <td><%= city.state %></td>
+    <td><%= city.latitude %></td>
+    <td><%= city.longitude %></td>
+    <td><%= city.gmaps %></td>
     <td><%= link_to 'Show', city %></td>
     <td><%= link_to 'Edit', edit_city_path(city) %></td>
     <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -11,16 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130907184741) do
+ActiveRecord::Schema.define(:version => 20131017104902) do
 
   create_table "cities", :force => true do |t|
     t.string   "name"
     t.string   "state"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
     t.float    "latitude"
     t.float    "longitude"
     t.boolean  "gmaps"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
