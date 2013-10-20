@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Matricula:</b>
+  <%= @user.matricula %>
+</p>
+
+<p>
+  <b>Anoingr:</b>
+  <%= @user.anoIngr %>
+</p>
+
+<p>
+  <b>Anoconc:</b>
+  <%= @user.anoConc %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @user.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @user.longitude %>
+</p>
+
+<p>
+  <b>Gmaps:</b>
+  <%= @user.gmaps %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @user.city_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
