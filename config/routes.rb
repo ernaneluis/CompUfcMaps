@@ -43,7 +43,7 @@ Maps::Application.routes.draw do
   #       get 'recent', :on => :collection
   #     end
   #   end
-get 'new', to: 'users#new'
+get 'cadastro', to: 'users#new'
   # Sample resource route within a namespace:
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController

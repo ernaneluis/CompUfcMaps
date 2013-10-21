@@ -23,6 +23,7 @@ background: url("ufc.png") left top no-repeat;
 }
 
 .legendas{
+  padding: 10px;
 width: 250px;
 color: #fff;
 float: left;
@@ -42,7 +43,7 @@ height: 20px;
 float: right;
 position: relative;
 right: -30px;
-top: 20px;
+top: -20px;
 display: table;
 font-weight: normal;
 text-align: left;
@@ -83,8 +84,8 @@ text-align: left;
   text-align:center;
   text-shadow:1px 1px 0px #b23e35;
   position: relative;
-  top: 50px;
-  left: 1350px;
+  top: 65px;
+  left: 1290px;
 }
 .btnCadastro:hover {
   background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00) );
@@ -94,11 +95,44 @@ text-align: left;
 }
 .btnCadastro:active {
   position:relative;
- top: 51px;
-  left: 1350px;
+ top: 66px;
+  left: 1290px;
 }
 .btnCadastro:visited {
 color: #ffffff;
 }
 
+form    {
+margin:auto;
+position:relative;
+width:550px;
+height:450px;
+font-family: Tahoma, Geneva, sans-serif;
+font-size: 14px;
+font-style: italic;
+line-height: 24px;
+font-weight: bold;
+color: #b10c17;
+-moz-border-radius: 10px;
+border-radius: 10px;
+padding:10px;
+border: 1px solid #999;
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+top: 100px;
+}
 
+.btnPanel{
+text-align: center;
+width: 455px;
+padding: 30px;
+}
+
+.title{
+  text-align: center;
+}
+
+.tbl{
+  width: 490px;
+  margin-right: auto;
+  margin-left: auto;
+}

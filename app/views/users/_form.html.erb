@@ -10,28 +10,43 @@
       </ul>
     </div>
   <% end %>
+  <h1 class="title">Cadastro de Ex-Alunos</h1>
+  <table class="tbl">
+          <tr>
+                  <td>
+                      <div class="field">
+                        <%= f.label "Nome" %><br />
+                        <%= f.text_field :name %>
+                      </div>
+                  </td>
+                  <td>
+                  <div class="field">
+                    <%= f.label :matricula %><br />
+                    <%= f.text_field :matricula %>
+                  </div>
+                  </td>
+          </tr>
+          <tr>
+                  <td>
+                      <div class="field">
+                        <%= f.label "Ano Ingresso" %><br />
+                        <%= f.number_field :anoIngr %>
+                      </div>
+                  </td>
+                  <td>
+                  <div class="field">
+                    <%= f.label "Ano Conclusão" %><br />
+                    <%= f.number_field :anoConc %>
+                  </div>
+                  </td>
+          </tr>
+            <tr><td>Cidade</td></tr>
+          <tr>
+              <%= render 'cities/form' %>
 
-  <div class="field">
-    <%= f.label "nome" %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :matricula %><br />
-    <%= f.text_field :matricula %>
-  </div>
-  <div class="field">
-    <%= f.label "Ano Ingresso" %><br />
-    <%= f.number_field :anoIngr %>
-  </div>
-  <div class="field">
-    <%= f.label "Ano Conclusão" %><br />
-    <%= f.number_field :anoConc %>
-  </div>
-  <div class="field">
-    <%= f.label :city_id %><br />
-    <%= f.number_field :city_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  </table>
+  <div class="btnPanel">
+  <%= submit_tag "Cadastrar" %>
+  <%= submit_tag "Cancelar", :type => 'button', :onclick => "history.back()" %>
   </div>
 <% end %>
