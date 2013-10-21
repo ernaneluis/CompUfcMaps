@@ -21,3 +21,29 @@ top: 10px;
 left: 10px;
 background: url("ufc.png") left top no-repeat;
 }
+
+.legendas{
+width: 250px;
+color: #fff;
+float: left;
+height: 100px;
+position: relative;
+top: 800px;
+left: -150px;
+background: rgba(0,0,0,0.8);
+}
+
+.legendas .out span{
+font-family: "Pontano Sans",sans-serif;
+-webkit-transform: rotate(90deg);
+font-size: 17px;
+width: 110px;
+height: 20px;
+float: right;
+position: relative;
+right: -30px;
+top: 20px;
+display: table;
+font-weight: normal;
+text-align: left;
+}
