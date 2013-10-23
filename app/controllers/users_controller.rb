@@ -25,7 +25,8 @@ class UsersController < ApplicationController
   # GET /users/new.json
   def new
     @user = User.new
-    @city =  City.new
+    @objective = Objective.new
+    @place =  Place.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,26 +42,35 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @city = City.new(params[:city])
 
-    respond_to do |format|
-      if @city.save
-        @user = User.new(params[:user])
-        @user.city_id = @city.id
-        respond_to do |format|
-          if @user.save
-            format.html { redirect_to @user, notice: 'User was successfully created.' }
-            format.json { render json: @user, status: :created, location: @user }
-          else
-            format.html { render action: "new" }
-            format.json { render json: @user.errors, status: :unprocessable_entity }
-          end
+        @place = Place.new(params[:place])
+            respond_to do |format|
+                if @place.save
+                          @user = User.new(params[:user])
+                                  respond_to do |format|
+                                          if @user.save
+                                            @objective = Objective.new(params[:objective])
+                                            @objective.user_id =  @user.id
+                                            @objective.place_id = @place.id
+                                            respond_to do |format|
+                                                  if @objective.save
+                                                    format.html { redirect_to @user, notice: 'User was successfully created.' }
+                                                    format.json { render json: @user, status: :created, location: @user }
+                                                  else
+                                                    format.html { render action: "new" }
+                                                    format.json { render json: @user.errors, status: :unprocessable_entity }
+                                                  end
+                                            end
+                                          else
+                                            format.html { render action: "new" }
+                                            format.json { render json: @user.errors, status: :unprocessable_entity }
+                                          end
+                                  end
+                  else
+                        format.html { render action: "new" }
+                        format.json { render json: @place.errors, status: :unprocessable_entity }
+                end
         end
-      else
-        format.html { render action: "new" }
-        format.json { render json: @city.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # PUT /users/1

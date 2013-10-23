@@ -1,0 +1,75 @@
+<%= form_for(@place) do |f| %>
+  <% if @place.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@place.errors.count, "error") %> prohibited this place from being saved:</h2>
+
+      <ul>
+      <% @place.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<%= form_for(@objective) do |t| %>
+  <% if @objective.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@objective.errors.count, "error") %> prohibited this objective from being saved:</h2>
+
+      <ul>
+      <% @objective.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<tr>
+  <td>
+        <div class="field">
+          <%= t.label "Tipo" %><br />
+          <%= t.text_field :objectiveType %>
+        </div>
+      </td>
+      <td>
+        <div class="field">
+          <%= t.label "Instituicao" %><br />
+          <%= t.text_field :Instituicao %>
+        </div>
+      </td>
+</tr>
+    <tr>
+      <td>
+        <div class="field">
+          <%= t.label "Periodo Inicio" %><br />
+          <%= t.text_field :periodoIni %>
+        </div>
+      </td>
+      <td>
+        <div class="field">
+          <%= t.label "Periodo Fim" %><br />
+          <%= t.text_field :periodoFim %>
+        </div>
+      </td>
+    </tr>
+<% end %>
+ <td>
+      <div class="field">
+        <%= f.label "Cidade" %><br />
+        <%= f.text_field :city %>
+      </div>
+    </td>
+    <td>
+      <div class="field">
+        <%= f.label "Estado" %><br />
+        <%= f.text_field :state %>
+      </div>
+    </td>
+    <tr>
+      <td>
+        <div class="field">
+          <%= f.label "País" %><br />
+          <%= f.text_field :country %>
+        </div>
+      </td>
+    </tr>
+
+<% end %>

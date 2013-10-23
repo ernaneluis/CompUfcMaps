@@ -11,11 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131020225912) do
+ActiveRecord::Schema.define(:version => 20131023154445) do
 
-  create_table "cities", :force => true do |t|
-    t.string   "name"
+  create_table "objectives", :force => true do |t|
+    t.string   "objectiveType"
+    t.string   "Instituicao"
+    t.string   "periodoIni"
+    t.string   "periodoFim"
+    t.integer  "user_id"
+    t.integer  "place_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "places", :force => true do |t|
+    t.string   "city"
     t.string   "state"
+    t.string   "country"
     t.float    "latitude"
     t.float    "longitude"
     t.boolean  "gmaps"
@@ -28,10 +40,6 @@ ActiveRecord::Schema.define(:version => 20131020225912) do
     t.string   "matricula"
     t.integer  "anoIngr"
     t.integer  "anoConc"
-    t.float    "latitude"
-    t.float    "longitude"
-    t.boolean  "gmaps"
-    t.integer  "city_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
