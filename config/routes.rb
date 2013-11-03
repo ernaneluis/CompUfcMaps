@@ -1,7 +1,7 @@
 Maps::Application.routes.draw do
   resources :places
   resources :users
-  resources :objectives
+  get :objectives, to: 'pages#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -43,6 +43,7 @@ Maps::Application.routes.draw do
   #     end
   #   end
 get 'cadastro', to: 'users#new'
+
   # Sample resource route within a namespace:
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
