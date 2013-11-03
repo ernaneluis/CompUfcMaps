@@ -29,6 +29,28 @@
           <tr>
                   <td>
                       <div class="field">
+                        <%= f.label :email %><br />
+                        <%= f.email_field :email %>
+                      </div>
+                  </td>
+          </tr>
+          <tr>
+                  <td>
+                      <div class="field">
+                        <%= f.label :password %><br />
+                        <%= f.password_field :password %>
+                      </div>
+                  </td>
+                  <td>
+                  <div class="field">
+                    <%= f.label :password_confirmation %><br />
+                    <%= f.password_field :password_confirmation %>
+                  </div>
+                  </td>
+          </tr>
+          <tr>
+                  <td>
+                      <div class="field">
                         <%= f.label "Ano Ingresso" %><br />
                         <%= f.number_field :anoIngr %>
                       </div>

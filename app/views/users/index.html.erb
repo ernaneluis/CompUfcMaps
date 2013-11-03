@@ -3,9 +3,10 @@
 <table>
   <tr>
     <th>Name</th>
+    <th>Email</th>
     <th>Matricula</th>
-    <th>Anoingr</th>
-    <th>Anoconc</th>
+    <th>Ano Ingr</th>
+    <th>Ano Conc</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,6 +15,7 @@
 <% @users.each do |user| %>
   <tr>
     <td><%= user.name %></td>
+    <td><%= user.email %></td>
     <td><%= user.matricula %></td>
     <td><%= user.anoIngr %></td>
     <td><%= user.anoConc %></td>

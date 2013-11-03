@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131023154445) do
+ActiveRecord::Schema.define(:version => 20131103113052) do
 
   create_table "objectives", :force => true do |t|
     t.string   "objectiveType"
@@ -37,11 +37,13 @@ ActiveRecord::Schema.define(:version => 20131023154445) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
     t.string   "matricula"
-    t.integer  "anoIngr"
-    t.integer  "anoConc"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "anoIngr"
+    t.string   "anoConc"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end

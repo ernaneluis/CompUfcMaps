@@ -2,12 +2,15 @@ class CreateObjectives < ActiveRecord::Migration
   def change
     create_table :users do |t|
       t.string :name
+      t.string :email
+      t.string :password_digest
       t.string :matricula
-      t.integer :anoIngr
-      t.integer :anoConc
+      t.string :anoIngr
+      t.string :anoConc
 
       t.timestamps
     end
+
     create_table :places do |t|
       t.string :city
       t.string :state
@@ -18,6 +21,7 @@ class CreateObjectives < ActiveRecord::Migration
 
       t.timestamps
     end
+
     create_table :objectives do |t|
       t.string :objectiveType
       t.string :Instituicao
