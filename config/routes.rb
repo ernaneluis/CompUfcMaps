@@ -1,7 +1,23 @@
 Maps::Application.routes.draw do
-  resources :places
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  get "log_in" => "sessions#new", :as => "log_in"
+  get "sign_up" => "users#new", :as => "sign_up"
+  get "places" => "users#newPlace", :as => "places"
+  get "new_place" => "users#createPlace", :as => "new_place"
+  post "places" => "users#savePlace", :as => "places"
+  # root :to => "users#new"
   resources :users
+  resources :sessions
+
+  # resources :users
+  # get :users, to:  'pages#index'
+  # get :places, to:  'pages#index'
   get :objectives, to: 'pages#index'
+
+  # post 'new', to: 'users#create'
+  # get 'cadastro', to: 'users#new'
+  # get 'login', to: 'logins#new'
+  root :to => 'pages#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -42,7 +58,7 @@ Maps::Application.routes.draw do
   #       get 'recent', :on => :collection
   #     end
   #   end
-get 'cadastro', to: 'users#new'
+
 
   # Sample resource route within a namespace:
   #   namespace :admin do
@@ -53,7 +69,7 @@ get 'cadastro', to: 'users#new'
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'pages#index'
+
 
   # See how all your routes lay out with "rake routes"
 

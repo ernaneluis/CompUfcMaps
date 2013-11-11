@@ -15,7 +15,6 @@ class PagesController < ApplicationController
                         "height" => '32'
                      })
                 end
-
     end
   end
 end
