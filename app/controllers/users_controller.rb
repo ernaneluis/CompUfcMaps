@@ -94,6 +94,7 @@ class UsersController < ApplicationController
     if @place.save
       @user = User.find(session[:user_id])
       @objective = Objective.new(params[:objective])
+      @objective.objectiveType = params[:objectiveType]
       @objective.user_id =  @user.id
       @objective.place_id = @place.id
         if @objective.save
