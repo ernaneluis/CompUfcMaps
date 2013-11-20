@@ -10,6 +10,9 @@ gem 'jquery-rails'
 gem 'gmaps4rails'
 gem 'bcrypt-ruby', '~> 3.0.0', :require => "bcrypt"
 
+group :production do
+        gem 'gmaps4rails'
+end
 
 
 # Gems used only for assets and not required
