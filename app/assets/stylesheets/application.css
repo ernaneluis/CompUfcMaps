@@ -29,7 +29,7 @@ color: #fff;
 float: left;
 height: 100px;
 position: relative;
-top: 800px;
+top: 750px;
 left: -150px;
 background: rgba(0,0,0,0.8);
 }
@@ -85,8 +85,8 @@ text-align: left;
   text-shadow:1px 1px 0px #b23e35;
   position: relative;
   z-index: 10;
-  top: 65px;
-  left: 1290px;
+  top: 40px;
+  left: 1590px;
 }
 .btnCadastro:hover {
   background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00) );
@@ -96,8 +96,8 @@ text-align: left;
 }
 .btnCadastro:active {
   position:relative;
- top: 66px;
-  left: 1290px;
+ top: 41px;
+  left: 1590px;
 }
 .btnCadastro:visited {
 color: #ffffff;

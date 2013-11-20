@@ -1,7 +1,7 @@
 Maps::Application.routes.draw do
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "log_in" => "sessions#new", :as => "log_in"
-  get "sign_up" => "users#new", :as => "sign_up"
+  get "cadastro" => "users#new", :as => "sign_up"
   get "places" => "users#newPlace", :as => "places"
   get "new_place" => "users#createPlace", :as => "new_place"
   post "places" => "users#savePlace", :as => "places"
