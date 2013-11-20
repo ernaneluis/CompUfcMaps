@@ -1,4 +1,4 @@
-class CreateObjectives < ActiveRecord::Migration
+class CreateNewTables < ActiveRecord::Migration
   def change
     create_table :users do |t|
       t.string :name
@@ -16,9 +16,6 @@ class CreateObjectives < ActiveRecord::Migration
       t.string :city
       t.string :state
       t.string :country
-      t.float :latitude
-      t.float :longitude
-      t.boolean :gmaps
 
       t.timestamps
     end
@@ -30,8 +27,12 @@ class CreateObjectives < ActiveRecord::Migration
       t.string  :periodoFim
       t.belongs_to :user
       t.belongs_to :place
+      t.float :latitude
+      t.float :longitude
+      t.boolean :gmaps
 
       t.timestamps
     end
   end
 end
+
