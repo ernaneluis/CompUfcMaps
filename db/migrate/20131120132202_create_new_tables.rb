@@ -8,6 +8,9 @@ class CreateNewTables < ActiveRecord::Migration
       t.string :matricula
       t.string :anoIngr
       t.string :anoConc
+      t.string :universidade
+      t.string :curso
+      t.string :cidade
 
       t.timestamps
     end

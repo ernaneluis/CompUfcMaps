@@ -1,8 +1,10 @@
 class PagesController < ApplicationController
   def index
   	@json = Objective.all.to_gmaps4rails do |objective, marker|
-                 marker.title objective.place.city
-                 marker.infowindow  objective.user.name
+                 marker.title objective.Instituicao
+                 # marker.infowindow  objective.users
+                 @object = Objective.where(:Instituicao => objective.Instituicao)
+                 marker.infowindow  render_to_string(:partial => "infowindow")
                 if objective.objectiveType == "Estudo"
                     marker.picture({
                         "picture" => "assets/pin_2.png",
@@ -16,6 +18,7 @@ class PagesController < ApplicationController
                         "height" => 32
                      })
                 end
+
     end
   end
 end

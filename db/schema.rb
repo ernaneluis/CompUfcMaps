@@ -43,6 +43,9 @@ ActiveRecord::Schema.define(:version => 20131120132202) do
     t.string   "matricula"
     t.string   "anoIngr"
     t.string   "anoConc"
+    t.string   "universidade"
+    t.string   "curso"
+    t.string   "cidade"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end

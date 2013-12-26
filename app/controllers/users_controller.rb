@@ -66,7 +66,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to root_url, :notice => "Signed up!"
+      redirect_to root_url
     else
       render "new"
     end
@@ -98,7 +98,7 @@ class UsersController < ApplicationController
       @objective.user_id =  @user.id
       @objective.place_id = @place.id
         if @objective.save
-          redirect_to root_url, :notice => "New Place"
+          redirect_to root_url
         end
     end
   end
