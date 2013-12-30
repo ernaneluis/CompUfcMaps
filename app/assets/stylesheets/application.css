@@ -22,6 +22,12 @@ left: 1%;
 background: url("ufc.png") left top no-repeat;
 }
 
+#user_nav{
+position: absolute;
+top: 8%;
+left: 84%;
+}
+
 .legendas{
   padding: 10px;
 width: 250px;
@@ -85,8 +91,6 @@ text-align: left;
   text-shadow:1px 1px 0px #b23e35;
   position: relative;
   z-index: 10;
-  top: 40px;
-  left: 1590px;
 }
 .btnCadastro:hover {
   background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00) );
@@ -94,11 +98,7 @@ text-align: left;
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00');
   background-color:#ce0100;
 }
-.btnCadastro:active {
-  position:relative;
- top: 41px;
-  left: 1590px;
-}
+
 .btnCadastro:visited {
 color: #ffffff;
 }
