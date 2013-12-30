@@ -10,6 +10,12 @@ class PagesController < ApplicationController
                         "width" =>  32,
                         "height" => 32
                      })
+                elsif objective.objectiveType == "Pesquisa"
+                    marker.picture({
+                        "picture" => "assets/pin_3.png",
+                        "width" =>  32,
+                        "height" => 32
+                     })
                 else
                   marker.picture({
                         "picture" => "assets/pin_1.png",

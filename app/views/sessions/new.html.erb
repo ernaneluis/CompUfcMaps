@@ -1,11 +1,15 @@
 <%= form_tag sessions_path do %>
-<h1 class="title">Login</h1>
+
+  <h1 class="title">Login</h1>
+  <% if @message == "Erro" %>
+      <div align="center">*Email ou senha invalido*</div>
+  <% end %>
   <table class="tbl-login">
   <tr>
                   <td>
                       <div class="field">
                         <%= label_tag :email %><br />
-                        <%= text_field_tag :email, params[:email] %>
+                        <%= email_field_tag :email, params[:email] %>
                       </div>
                   </td>
                   </tr>

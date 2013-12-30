@@ -5,11 +5,11 @@ class User < ActiveRecord::Base
   attr_accessor :password
   before_save :encrypt_password
 
-  validates_confirmation_of :password
-   validates_presence_of :password, :on => :create
-   validates_presence_of :name
-   validates_presence_of :email
-   validates_uniqueness_of :email
+   validates_confirmation_of :password, :message => "nao esta igual a confirmacao"
+   validates_presence_of :password, :on => :create, :message => "nao pode ser vazio"
+   validates_presence_of :name, :message => "nao pode ser vazio"
+   validates_presence_of :email, :message => "nao pode ser vazio"
+   validates_uniqueness_of :email, :message => "ja cadastrado"
 
    def self.authenticate(email, password)
      user = find_by_email(email)
@@ -26,4 +26,11 @@ class User < ActiveRecord::Base
        self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
      end
    end
+
+HUMANIZED_ATTRIBUTES = { :password => "Senha",:name => "Nome",:anoConc => "Ano Conclusao",:anoIngr => "Ano Ingresso" }
+
+   def self.human_attribute_name(attr, options={})
+      HUMANIZED_ATTRIBUTES[attr.to_sym] || super
+   end
+
 end
