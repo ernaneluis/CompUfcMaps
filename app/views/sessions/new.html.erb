@@ -1,5 +1,5 @@
 <%= form_tag sessions_path do %>
-<h1 class="title">Log in</h1>
+<h1 class="title">Login</h1>
   <table class="tbl-login">
   <tr>
                   <td>
@@ -12,15 +12,15 @@
                   <tr>
                   <td>
                   <div class="field">
-                    <%= label_tag :password %><br />
+                    <%= label_tag "Senha" %><br />
                     <%= password_field_tag :password %>
                   </div>
                   </td>
           </tr>
            </table>
           <div class="btnPanel">
-  <%= submit_tag "Log in" %>
-  <%= submit_tag "Cancelar", :type => 'button', :onclick => "history.back()" %>
+  <%= submit_tag "Login" %>
+  <%= link_to  "Cancelar", root_url %>
   </div>
 
 <% end %>

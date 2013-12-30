@@ -9,12 +9,12 @@
    </ul>
 </div>
 <% end %>
-<h1 class="title">Cadastro de Ex-Alunos</h1>
+<h1 class="title">Cadastro de Aluno</h1>
 <table class="tbl">
    <tr>
       <td>
          <div class="field">
-            <%= f.label "Nome" %><br />
+            <%= f.label "Nome Completo" %><br />
             <%= f.text_field :name %>
          </div>
       </td>
@@ -56,13 +56,13 @@
    <tr>
       <td>
          <div class="field">
-            <%= f.label :password %><br />
+            <%= f.label "Senha" %><br />
             <%= f.password_field :password %>
          </div>
       </td>
       <td>
          <div class="field">
-            <%= f.label :password_confirmation %><br />
+            <%= f.label "Confirme a Senha" %><br />
             <%= f.password_field :password_confirmation %>
          </div>
       </td>
@@ -71,19 +71,19 @@
       <td>
          <div class="field">
             <%= f.label "Ano Ingresso" %><br />
-            <%= f.number_field :anoIngr %>
+            <%= f.text_field :anoIngr %>
          </div>
       </td>
       <td>
          <div class="field">
             <%= f.label "Ano Conclusão" %><br />
-            <%= f.number_field :anoConc %>
+            <%= f.text_field :anoConc %>
          </div>
       </td>
    </tr>
 </table>
 <div class="btnPanel">
    <%= submit_tag "Cadastrar" %>
-   <%= submit_tag "Cancelar", :type => 'button', :onclick => "history.back()" %>
+   <%= link_to  "Cancelar", root_url %>
 </div>
 <% end %>

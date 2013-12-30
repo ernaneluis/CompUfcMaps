@@ -1,3 +1,12 @@
+<div id="user_nav">
+  <% if current_user %>
+  <%= link_to "Meus Locais".html_safe, places_path, :class => "btnCadastro" %>
+  <%= link_to "Logout".html_safe, log_out_path, :class => "btnCadastro" %>
+  <% else %>
+  <%= link_to "Cadastro".html_safe, sign_up_path, :class => "btnCadastro" %>
+  <%= link_to "Login".html_safe, log_in_path, :class => "btnCadastro" %>
+  <% end %>
+</div>
 <div class="logo"></div>
 <%= gmaps(:map_options => { :auto_adjust => false, :zoom => 3, :raw => '{  panControlOptions: {
                                   position: google.maps.ControlPosition.LEFT_CENTER

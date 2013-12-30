@@ -1,22 +1,16 @@
 Maps::Application.routes.draw do
-  get "log_out" => "sessions#destroy", :as => "log_out"
-  get "log_in" => "sessions#new", :as => "log_in"
+  get "logout" => "sessions#destroy", :as => "log_out"
+  get "login" => "sessions#new", :as => "log_in"
   get "cadastro" => "users#new", :as => "sign_up"
-  get "places" => "users#newPlace", :as => "places"
-  get "new_place" => "users#createPlace", :as => "new_place"
-  post "places" => "users#savePlace", :as => "places"
-  # root :to => "users#new"
+  get "locais" => "users#newPlace", :as => "places"
+  get "novo_local" => "users#createPlace", :as => "new_place"
+  post "locais" => "users#savePlace", :as => "places"
+
   resources :users
   resources :sessions
 
-  # resources :users
-  # get :users, to:  'pages#index'
-  # get :places, to:  'pages#index'
-  get :objectives, to: 'pages#index'
 
-  # post 'new', to: 'users#create'
-  # get 'cadastro', to: 'users#new'
-  # get 'login', to: 'logins#new'
+  get :objectives, to: 'pages#index'
   root :to => 'pages#index'
 
   # The priority is based upon order of creation:

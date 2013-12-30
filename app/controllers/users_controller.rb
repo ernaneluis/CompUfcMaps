@@ -8,14 +8,14 @@ class UsersController < ApplicationController
   #   end
   # end
 
-  # def show
-  #   @user = User.find(params[:id])
-
-  #   respond_to do |format|
-  #     format.html # show.html.erb
-  #     format.json { render json: @user }
-  #   end
-  # end
+  def show
+    @user = User.find(params[:id])
+    @places = Objective.where(:user_id => params[:id])
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @user }
+    end
+  end
 
   def new
     @user = User.new
@@ -131,5 +131,12 @@ class UsersController < ApplicationController
   # def doLogin
   #   @user = User.new(params[:user])
   # end
+
+before_filter :check_for_cancel, :only => [:create, :update]
+def check_for_cancel
+  if params[:commit] == "Cancel"
+    redirect_to root_url
+  end
+end
 
 end

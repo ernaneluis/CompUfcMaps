@@ -2,7 +2,6 @@ class PagesController < ApplicationController
   def index
   	@json = Objective.all.to_gmaps4rails do |objective, marker|
                  marker.title objective.Instituicao
-                 # marker.infowindow  objective.users
                  @object = Objective.where(:Instituicao => objective.Instituicao)
                  marker.infowindow  render_to_string(:partial => "infowindow")
                 if objective.objectiveType == "Estudo"
